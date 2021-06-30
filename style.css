@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.material-icons{
+    cursor: pointer;
+}
+.headwrapper{
+    background-image: linear-gradient(to left bottom,powderblue,white);
+    background-color: powderblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 15vh;
+    padding-bottom: 10px;
+}
+.task-header{
+    width: 30vw;
+    text-align: center;
+    /* height: 5vh; */
+    /* font-size: 100px; */
+}
+.material-icons.add-button{
+    font-size: 40px;
+    font-weight: 100;
+    color:#6FB3B8;
+}
+.clicked{
+    animation-name: roll;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(11.25deg);
+    }
+    50% {
+        transform: rotate(22.5deg);
+    }
+    75% {
+        transform: rotate(33.75deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+
+}
+
+.unclicked{
+    transform: rotate(45deg);
+    animation-name: unroll;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+@keyframes unroll {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-11.25deg);
+    }
+    50% {
+        transform: rotate(-22.5deg);
+    }
+    75% {
+        transform: rotate(-33.75deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+
+}
+.task-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+    padding: 10px;
+    
+
+}
+.submit{
+    height: 100%
+}
+.task-input{
+    width: 70%;
+    border: solid 1px black;
+    outline: none;
+    border-radius: 4px;
+}
+.togclass{
+    display: none;
+}
+.tasklist{
+    background-image: linear-gradient(to left top,#C2EDCE,white);
+    width: 30vw;
+    padding: 20px;
+    height: 85vh;
+    overflow: scroll;
+    /* overflow-y: hidden; */
+}
+.tasklist::-webkit-scrollbar {
+    display: none;
+  }
+.task-item{
+    margin: 4px;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.task{
+    text-align: center;
+    height: 100%;
+    width: 90%;
+}
+.completion{
+    height: 100%;
+}
