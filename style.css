@@ -20,6 +20,9 @@
     /* justify-content: center; */
     height: 15vh;
     padding-bottom: 10px;
+    border: 1px solid rgb(127, 219, 231);
+    border-bottom: none;
+    width: 30vw;
 }
 .task-header{
     width: 30vw;
@@ -86,6 +89,7 @@
     align-items: center;
     width: 30vw;
     padding: 10px;
+    padding-bottom: 0;
     
 
 }
@@ -108,6 +112,8 @@
     height: 85vh;
     overflow: scroll;
     /* overflow-y: hidden; */
+    border: 1px solid #b6f0c7;
+    border-top: none;
 }
 .tasklist::-webkit-scrollbar {
     display: none;
@@ -126,4 +132,8 @@
 }
 .completion{
     height: 100%;
+}
+.empty-alert{
+    color: red;
+    font-size: 2vh;
 }
